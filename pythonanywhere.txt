@@ -1,0 +1,36 @@
+1. Upload file on pythonanywhere
+2. Make vartual env
+----> mkvirtualenv django20 --python=/usr/bin/python3.6
+3. unzip file
+----> unzip pRecommned.zip
+4. Create a web app and in web section - WSGI file configuration
+5.Go root project where -> manage.py 
+----> cd projectname
+6.Change host in setting file in python project, makes ['*']
+7. Collect all Static files
+----> python manage.py collectstatic
+8.Set static url in web section 
+
+
+
+
+
+
+######## WSGI File ####################
+
+
+import os
+import sys
+#
+## assuming your django settings file is at '/home/shakil363410/mysite/mysite/settings.py'
+## and your manage.py is is at '/home/shakil363410/mysite/manage.py'
+path = '/home/shakil363410/pRecommend'
+if path not in sys.path:
+    sys.path.append(path)
+#
+os.environ['DJANGO_SETTINGS_MODULE'] = 'recoProject.settings'
+#
+## then:
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+
