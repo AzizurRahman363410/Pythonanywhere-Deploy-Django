@@ -1,8 +1,16 @@
 1. Upload file on pythonanywhere
 2. Make vartual env
 ----> mkvirtualenv django20 --python=/usr/bin/python3.6
+### set virtual env as django20 in web section
+OR 
+---> mkvirtualenv --python=/usr/bin/python3.6 env
+### set virtual env as env in web section
+
 3. unzip file
 ----> unzip pRecommned.zip
+OR Clone from GitHub
+---> git clone https://github.com/arshakil/Pythonanywhere-Deploy-Django.git
+
 4. Create a web app and in web section - WSGI file configuration
 5.Go root project where -> manage.py 
 ----> cd projectname
@@ -12,6 +20,7 @@
 8.Set static url in web section 
 
 
+ @@@@ For More information flow the link::  https://youtu.be/Y4c4ickks2A
 
 
 
